@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "看你写代码",
+  "version": "1.0.0",
+  "description": "给网页加一个图片",
+  "icons":{
+    "16":"img/icon.png",
+    "32":"img/icon.png",
+    "48":"img/icon.png",
+    "128":"img/icon.png"
+  },
+  "action":{
+    "default_icon":"img/icon.png",
+    "default_title":"第一个chrome插件",
+    "default_popup":"popup/index.html"
+  },
+  "content_scripts":[{
+    "matches":["<all_urls>"],
+    "js":["contentJs/index.js"],
+    "css":["css/index.css"],
+    "run_at":"document_end"
+  }],
+  "web_accessible_resources":[{
+    "resources": ["img/*"],
+    "matches": ["<all_urls>"]
+  }]
+}

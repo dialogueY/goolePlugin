@@ -1,0 +1,12 @@
+.img {
+  width: 100px;
+  height: 130px;
+}
+.fix-div {
+  width: 100px;
+  height: 130px;
+  position:fixed;
+  bottom:0;
+  left:0;
+  z-index:10000
+}
